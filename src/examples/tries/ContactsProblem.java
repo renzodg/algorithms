@@ -1,6 +1,13 @@
 package examples.tries;
 
 public class ContactsProblem {
+	
+	public static void main(String[] args) {
+        Node node = new Node();
+        node.add("renzo");
+        int result = node.findCount("o", 0);
+        System.out.println(result);
+    }
 
     static class Node {
         private static int NUMBER_OF_CHARACTERS = 26;
@@ -47,13 +54,6 @@ public class ContactsProblem {
             }
             
             return child.findCount(s, index + 1);
-        }
-        
-        public static void main(String[] args) {
-            Node node = new Node();
-            node.add("renzo");
-            int result = node.findCount("o", 0);
-            System.out.println(result);
         }
         
     }
