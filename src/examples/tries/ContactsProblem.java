@@ -1,20 +1,23 @@
 package examples.tries;
 
+import java.util.Arrays;
+
 public class ContactsProblem {
 	
 	public static void main(String[] args) {
         Node node = new Node();
         node.add("renzo");
-        int result = node.findCount("o", 0);
+        node.add("renato");
+        int result = node.findCount("renzo", 0);
         System.out.println(result);
     }
 
-    static class Node {
+    public static class Node {
         private static int NUMBER_OF_CHARACTERS = 26;
         Node[] children = new Node[NUMBER_OF_CHARACTERS];
         int size = 0;
         
-        private static int getCharIndex(char c) {
+		private static int getCharIndex(char c) {
             return c - 'a';
         }
         
@@ -31,6 +34,7 @@ public class ContactsProblem {
         }
         
         private void add(String s, int index) {
+        	size++;
             if (index == s.length()) return;
             
             char current = s.charAt(index);

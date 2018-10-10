@@ -3,7 +3,7 @@ package examples.maximum_width;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MaximumWidth {
+public class Solution {
 	
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -16,7 +16,7 @@ public class MaximumWidth {
         root.right.right.right = new Node(7);
         
 //        int result = MaximumWidth.getMaximumWidth(root);
-        int result = MaximumWidth.getMaximumWidthUsingQueue(root);
+        int result = Solution.getMaximumWidthUsingQueue(root);
         System.out.println("result: " + result);
     }
 

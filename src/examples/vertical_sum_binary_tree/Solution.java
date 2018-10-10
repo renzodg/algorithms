@@ -3,7 +3,7 @@ package examples.vertical_sum_binary_tree;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VerticalSumBinaryTree {
+public class Solution {
 	
     public static void main(String[] args) {
         Node root = new Node(1);
