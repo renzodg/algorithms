@@ -9,18 +9,20 @@ public class Solution {
 			return new BigInteger("1");
 		}
 		
-		BigInteger[] bottomUp = new BigInteger[n + 1];
+		BigInteger[] bottomUp = new BigInteger[2];
+		bottomUp[0] = new BigInteger("1");
 		bottomUp[1] = new BigInteger("1");
-		bottomUp[2] = new BigInteger("1");
 		for (int i = 3; i < n + 1; i++) {
-			bottomUp[i] = bottomUp[i-1].add(bottomUp[i-2]);
+		    BigInteger temp = bottomUp[1];
+			bottomUp[1] = bottomUp[0].add(bottomUp[1]);
+			bottomUp[0] = temp;
 		}
 		
-		return bottomUp[n];
+		return bottomUp[1];
 	}
 	
 	public static void main(String[] args) {
-		BigInteger result = getFibonacciNumber(10000);
+		BigInteger result = getFibonacciNumber(1000000);
 		System.out.println(result);
 	}
 }
