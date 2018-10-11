@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Solution {
 
     public static void main(String[] args) {
-        int[] result = findChoices(new int[] { 1,3,5,6,7,9,11}, 10);
+        int[] result = findChoices(new int[] { 1,2, 4, 4}, 8);
         
         System.out.println(Arrays.toString(result));
     }
